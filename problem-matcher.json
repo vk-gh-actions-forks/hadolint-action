@@ -1,13 +1,15 @@
 {
   "problemMatcher": [
     {
-      "owner": "brpaz/hadolint-action",
+      "owner": "hadolint/hadolint-action",
       "pattern": [
         {
-          "regexp": "(.*)\\:(\\d+)\\s(.*)",
+          "regexp": "^(.+):(\\d+)\\s(.+)\\s(error|warning|info|style):\\s(.+)$",
           "file": 1,
           "line": 2,
-          "message": 3
+          "code": 3,
+          "severity": 4,
+          "message": 5
         }
       ]
     }
